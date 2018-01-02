@@ -27,4 +27,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools```
 	```mkdir android/app/src/main/assets```
 	```react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res```
 
+- ENOSPC
 
+	```echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p ```
